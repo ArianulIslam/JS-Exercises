@@ -5,7 +5,7 @@ console.log("I am From External JS");
 
 function summmation(val) {
   var sum=0;
-       for(var i = 0; i < val ; i++){
+       for(var i = 0; i < val.length ; i++){
        sum=sum+val[i];
        }
         return sum;
