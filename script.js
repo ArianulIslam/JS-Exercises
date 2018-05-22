@@ -5,10 +5,9 @@ console.log("I am From External JS");
 
 function summmation(val) {
   var sum=0;
-        val.forEach(function(value, index){
-          sum+=value;
-
-        });
+       for(var i = 0; i < val ; i++){
+       sum=sum+val[i];
+       }
         return sum;
         }
 
