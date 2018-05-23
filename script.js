@@ -5,9 +5,10 @@ console.log("I am From External JS");
 
 function summmation(val) {
   var sum=0;
-       for(var i = 0; i < val.length ; i++){
-       sum=sum+val[i];
-       }
+        val.forEach(function(value, index){
+          sum+=value;
+
+        });
         return sum;
         }
 
@@ -49,9 +50,7 @@ function getReadingStatus(index){
 }
 
 console.log(getReadingStatus(2));
-
 //task 5
-
 var cart = [ 
    {
        name: 'Shoes',
@@ -69,6 +68,43 @@ var cart = [
        quantity: 2
    }];
 
+
+
+//task 5 a
+function addItem(newItem){
+    cart.push(newItem);
+    console.log(cart);
+}
+var newItem = {name :"Burger", price :250, quantity:2};
+addItem(newItem);
+ 
+ 
+ 
+//task 5 b
+
+console.log(cart.sort());
+ 
+
+//task 5 c
+
+function findByname(givenName){
+    
+    for(var i = 0 ; i < cart.length; i++){
+        if(cart[i].name == givenName ){
+         console.log("Name : "+cart[i].name + " Price : " + cart[i].price +" Quantity: "+cart[i].quantity);
+        }
+    }
+}
+
+findByname("Socks");
+
+
+ 
+ 
+
+//task 5 d
+
+
 function totalbill(){
     var totalAmout=0;
    for (var i = 0 ;  i <cart.length; i++){
@@ -77,4 +113,5 @@ function totalbill(){
   return totalAmout;
 }
 
-  console.log(totalbill());
+console.log(totalbill());
+
